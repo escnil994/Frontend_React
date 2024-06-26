@@ -1,0 +1,47 @@
+/* AppComments.css */
+
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 200, "opsz" 48;
+  }
+  
+  .circulo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icono {
+    font-size: 2rem;
+  }
+  
+  @media (max-width: 1000px) {
+    .circulo {
+      height: 42px;
+      width: 42px;
+    }
+  }
+  
+  @media (max-width: 650px) {
+    .circulo {
+      height: 35px;
+      width: 35px;
+    }
+  
+    .icono {
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .col-10 {
+      width: 100%;
+    }
+  
+    .col-2 {
+      display: none;
+    }
+  }
+  

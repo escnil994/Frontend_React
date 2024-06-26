@@ -1,0 +1,380 @@
+@media (max-width: 1300px) {
+  #login #user {
+    margin-left: 30px;
+  }
+
+  #login #password {
+    margin-left: 30px;
+  }
+
+  #login input[type="email"], #login input[type="password"] {
+    padding-left: 25px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #comments .comment-item #content-comment {
+    padding-left: 49px;
+  }
+}
+
+@media (max-width: 1150px) {
+  #content {
+    width: 71%;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  #content {
+    width: 72%;
+  }
+
+  #login #user {
+    margin-left: 25px;
+  }
+
+  #login #password {
+    margin-left: 25px;
+  }
+
+  #login input[type="email"], #login input[type="password"] {
+    padding-left: 20px;
+  }
+
+  #comments .comment-item #content-comment {
+    margin-top: -17px;
+    padding-left: 41px;
+  }
+
+  aside .sp {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 999px) {
+  #resume-go {
+    display: none;
+  }
+}
+
+@media (max-width: 950px) {
+  #logo {
+    height: 56px;
+    margin-top: 0px;
+  }
+
+  #menu > ul > li {
+    line-height: 55px;
+  }
+
+  #content {
+    width: 68%;
+  }
+
+  .sidebar-item {
+    width: 117%;
+  }
+
+  .show .nav-item .nav-link {
+    font-size: 20px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  #logo {
+    height: 57px;
+    margin-top: -1px;
+  }
+
+  #menu > ul > li {
+    font-size: 16px;
+    line-height: 50px;
+  }
+
+  #content {
+    width: 68%;
+  }
+
+  .sidebar-item {
+    width: 117%;
+  }
+
+  .subheader {
+    font-size: 25px;
+  }
+
+  .project-item h2 {
+    font-size: 22px;
+  }
+
+  #banner {
+    height: 100px;
+  }
+
+  #banner > h1 {
+    font-size: 28px;
+  }
+
+  #content .contact-p {
+    font-size: 20px !important;
+  }
+
+  aside .sp {
+    font-size: 25px;
+    padding-left: 0px;
+  }
+
+  .btn-reply-btn {
+    font-size: 12px;
+  }
+
+  .date-post {
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 850px) {
+  #logo {
+    height: 60px;
+    font-size: 10px;
+    margin-top: -1px;
+  }
+
+  .show .nav-item .nav-link {
+    font-size: 17px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  #comments .comment-item #content-comment {
+    margin-top: -17px;
+    padding-left: 30px;
+  }
+
+  .orno {
+    visibility: hidden;
+  }
+
+  #last-projects-title {
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .project-item-especial h5 {
+    font-size: 20px !important;
+  }
+
+  #body #content #my-info p {
+    font-size: 15px;
+  }
+
+  aside .sp {
+    font-size: 22px;
+  }
+
+  #last-projects-title {
+    font-size: 17px !important;
+  }
+
+  #errr h1 {
+    font-size: 275px;
+  }
+
+  #errr h3 {
+    font-size: 30px;
+  }
+
+  #errr p {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 650px) {
+  #content {
+    width: 98%;
+  }
+
+  .sidebar-item {
+    text-align: center !important;
+    width: 400%;
+  }
+
+  #search {
+    display: none;
+  }
+
+  .aside-box {
+    height: auto;
+    padding-bottom: 15px;
+  }
+
+  #post-image-item img {
+    width: 50%;
+  }
+
+  .image-wrap-unit img {
+    width: 60%;
+  }
+
+  .details {
+    padding-left: 20px;
+  }
+
+  #errr h1 {
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  #banner {
+    width: 90% !important;
+  }
+
+  #banner > h1 {
+    font-size: 25px;
+  }
+
+  #post-title-item h4 {
+    font-size: 18px !important;
+  }
+
+  #content-post {
+    font-size: 12px;
+    line-height: normal;
+  }
+
+  #content-post #post-intro {
+    font-size: 15px !important;
+  }
+
+  #git_image {
+    margin: 0px auto;
+    width: 40%;
+    text-align: center;
+  }
+
+  .date-post {
+    font-size: 12px;
+  }
+
+  #body {
+    width: 95%;
+    min-height: 300px;
+  }
+
+  .project-item .image-wrap {
+    width: 100% !important;
+    margin: 0px !important;
+  }
+
+  #contact-data {
+    margin-left: 0px !important;
+  }
+
+  #contact-data ul li {
+    list-style: none;
+  }
+
+  .show .nav-item .nav-link {
+    font-size: 12px !important;
+  }
+
+  #logo {
+    height: 60px;
+    font-size: 10px;
+    margin-top: -1px;
+  }
+
+  .project-item h2 {
+    font-size: 17px;
+  }
+
+  #video {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 50%;
+    padding-top: 30px;
+    position: relative;
+  }
+
+  #video iframe, #video object, #video embed, #video youtube-player {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  #repliesRes {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    margin-top: 0px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .date-post {
+    line-height: 25px;
+    margin-left: 0%;
+    font-size: 12px;
+  }
+
+  #url {
+    font-size: 20px;
+  }
+
+  #content .container ul .contact-p a {
+    font-size: 13px;
+  }
+}
+
+
+@media (max-width: 450px) {
+  #body #content #my-info p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 415px) {
+  .date-post {
+    line-height: 20px;
+    margin-left: 0%;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  #logo {
+    width: 200px;
+  }
+
+  #logo .gear {
+    font-size: 25px;
+    margin-top: 11px;
+  }
+
+  #logo h3 {
+    font-size: 30px;
+    margin-top: 13.5px;
+  }
+
+  #logo > h3 {
+    margin-right: 30px;
+  }
+
+  #body {
+    width: 95%;
+  }
+}
+
+@media (max-width: 370px) {
+  .show .nav-item {
+    width: 35%;
+  }
+
+  .show .nav-item .nav-link {
+    font-size: 10px !important;
+  }
+}
