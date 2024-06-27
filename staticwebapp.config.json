@@ -1,12 +1,5 @@
 {
-    "routes": [
-      {
-        "route": "/*",
-        "serve": "/index.html"
-      }
-    ],
-    "functions": {
-      "runtime": "nodejs20"
-    }
+  "navigationFallback": {
+    "rewrite": "/index.html"
   }
-  
+}
