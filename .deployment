@@ -1,0 +1,2 @@
+[config]
+command = "oryx build --platform nodejs --platform-version 18.0.0 --log-file /tmp/build.log"
