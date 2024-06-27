@@ -22,7 +22,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18.x' # Especifica la versión de Node.js que necesitas
+          node-version: '20.x' # Especifica la versión de Node.js que necesitas
       - run: npm install -g yarn # Asegúrate de tener yarn instalado globalmente
       - name: Build And Deploy
         id: builddeploy
@@ -35,7 +35,7 @@ jobs:
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
           app_location: "/" # App source code path
           api_location: "" # Api source code path - optional
-          output_location: "build" # Built app content directory - optional
+          output_location: "dist" # Built app content directory - cambiar de 'build' a 'dist'
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
