@@ -5,10 +5,10 @@ const AppHeader = ({ headerTitleModifible = "About ME", image = "path/to/image.j
   return (
     <nav className="navbar p-0 fixed-top navbar-dark bg-dark bg-gradient text-white navbar-expand-md">
       <div className="container-fluid">
-        <div id="logo">
+        <Link to={"/"} id="logo">
           <span className="gear">S</span>
           <h3>ESCNIL994</h3>
-        </div>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"

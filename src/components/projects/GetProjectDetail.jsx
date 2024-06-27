@@ -24,10 +24,26 @@ const ProjectDetail = () => {
   if (!project) return <div>Loading...</div>;
 
 
+  
 
- 
 
-  const videoUrl = `https://www.youtube.com/embed/${project.videoId}`; 
+  const renderYouTubeVideo = (url ) => (
+    <div className="video general-text">
+      <h4>También puedes ver el video donde te doy una pequeña explicación de cómo está hecho:</h4>
+      <div id="video">
+        <iframe
+          width="560"
+          height="315"
+          src={url}
+          frameBorder="0"
+          allowFullScreen
+          title="YouTube video"
+        ></iframe>
+      </div>
+    </div>
+  );
+
+  const videoUrl = `https://www.youtube.com/embed/${project.video}`; 
 
   return (
     <div id="body">
@@ -52,12 +68,7 @@ const ProjectDetail = () => {
           <h4 className="text-center general-text">Puedes ver en la siguiente url:</h4>
           <a className="font-weight-bold" href={project.url}>{project.title}</a>
         </div>
-        <div className="video general-text">
-          <h4>Tambien puedes ver el video donde te doy una pequeña explicación de cómo está hecho:</h4>
-          <div id="video">
-            <iframe width="560" height="315" src={videoUrl} frameBorder="0" allowFullScreen></iframe>
-          </div>
-        </div>
+        {renderYouTubeVideo(videoUrl)}
         <div className="clearfix"></div>
       </article>
     </div>

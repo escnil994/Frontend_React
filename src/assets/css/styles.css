@@ -245,6 +245,7 @@ body {
 }
 
 #banner {
+  margin-top: 120px !important;
   width: 96%;
   text-align: center;
   margin: 0px auto;
@@ -281,7 +282,7 @@ body {
   text-shadow: 2px 2px 1px black;
   overflow: hidden;
   margin: 19px auto;
-  animation: showText 3s linear;
+  animation: showText 1.5s linear;
 }
 
 @keyframes showText {

@@ -1,23 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const AppBanner = () => {
   const location = useLocation();
   const [sliderName, setSliderName] = useState('Slider Name');
 
   useEffect(() => {
-    switch (location.pathname) {
-      case '/projects/get-all-projects':
-        setSliderName('Projects List');
-        break;
-      case '/user/profile/get-escnil994-info':
-        setSliderName('My Profile');
-        break;
-      case '/user/profile/contact':
-        setSliderName('Contact To Me');
-        break;
-      default:
-        setSliderName('Not Found');
+    const sliderNamesMap = {
+      '/projects/get-all-projects': 'Projects',
+      '/user/profile/get-escnil994-info': 'My Profile',
+      '/user/profile/contact': 'Contact To Me',
+    };
+
+    const projectDetailPattern = /^\/projects\/get-project\/[a-f0-9]{24}\/(.+)$/;
+    const match = location.pathname.match(projectDetailPattern);
+
+    if (match) {
+      setSliderName(decodeURIComponent(match[1]));
+    } else {
+      const currentSliderName = sliderNamesMap[location.pathname] || 'Not Found';
+      setSliderName(currentSliderName);
     }
   }, [location.pathname]);
 
@@ -25,7 +28,17 @@ const AppBanner = () => {
     <section className="wrap">
       <section id="info">
         <div id="banner">
-          <h1>{sliderName}</h1>
+          <AnimatePresence mode="wait">
+            <motion.h1
+              key={sliderName}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -50 }}
+              transition={{ duration: 0.3 }}
+            >
+              {sliderName}
+            </motion.h1>
+          </AnimatePresence>
         </div>
       </section>
     </section>

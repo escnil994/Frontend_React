@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { getProjects } from '../../services/AppProjectService';
+import { useNavigate } from 'react-router-dom';
 
 const AppGetProjects = () => {
   const [projects, setProjects] = useState([]);
   const [total, setTotal] = useState(0);
   const [page, setPage] = useState(1);
   const limit = 3;
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -29,6 +31,10 @@ const AppGetProjects = () => {
     if (projects.length === limit) setPage(page + 1);
   };
 
+  const handleProjectClick = (project) => {
+    navigate(`/projects/get-project/${project._id}/${project.title}`);
+  };
+
   if (!projects.length) return <div>Loading...</div>;
 
   return (
@@ -37,7 +43,7 @@ const AppGetProjects = () => {
       <hr />
       <div id="posts" className="">
         {projects.map(project => (
-          <article key={project._id} id="showed-post" className="JetBrains m-3" onClick={() => window.location.href = `get-project/${project._id}/${project.title}`}>
+          <article key={project._id} id="showed-post" className="JetBrains m-3" onClick={() => handleProjectClick(project)}>
             <div id="post-title-item">
               <h4>
                 <span id="post-title" className="general-text">{project.title}</span>

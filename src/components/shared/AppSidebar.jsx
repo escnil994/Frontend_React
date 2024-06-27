@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getProjects } from '../../services/AppProjectService';
 import { AppGetUtils } from '../../services/AppUserService';
 import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const AppSidebar = () => {
   const [info, setInfo] = useState(true);
@@ -86,10 +87,10 @@ const AppSidebar = () => {
           ) : (
             projects.map(project => (
               <article className="project-item-especial" key={project._id}>
-                <a href={`portfolio/get-all-projects/get-project/${project._id}&${project.title}`}>
+                <Link to={`/projects/get-project/${project._id}/${project.title}`}>
                   <img className="w-25" src={project.image.secure_url} alt={project.title} />
                   <h5 id="last-projects-title">{project.title}</h5>
-                </a>
+                </Link>
               </article>
             ))
           )}
@@ -106,7 +107,7 @@ const AppSidebar = () => {
             <a className="icon face" href="https://facebook.com/escnil994" target="_blank" rel="noopener noreferrer">f</a>
           </div>
           <div className="youtube">
-            <a href="auth/escnil994-contact" className="mas JetBrains"><strong>ver mas</strong></a>
+            <Link to="/user/profile/contact" className="mas JetBrains"><strong>ver mas</strong></Link>
           </div>
         </div>
       </div>

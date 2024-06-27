@@ -1,0 +1,34 @@
+.bgcert {
+    background-color: #f5fdff !important;
+}
+
+.bgskills {
+    background-color: #ffffff !important;
+}
+
+@font-face {
+    font-family: "JetBrains";
+    src: url("fonts/JetBrainsMono-Bold.ttf");
+  }
+
+
+  
+.rounded {
+    border-radius: 0.5rem !important;
+}
+
+@media (max-width: 900px) {
+    .img-thumbnail {
+        width: 100%;
+    }
+
+    .text-start {
+        text-align: center;
+    }
+}
+
+
+.about-text{
+    font-family: JetBrains;
+    font-size: 0.85rem;
+}
