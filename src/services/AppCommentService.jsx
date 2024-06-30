@@ -2,10 +2,9 @@ import axios from 'axios';
 
 const backend_url = 'https://backend-escnil994.herokuapp.com/api';
 
+// Interceptores de solicitud y respuesta
 axios.interceptors.request.use(
   config => {
-    // Puedes añadir tokens de autenticación aquí si es necesario
-    // config.headers.Authorization = `Bearer ${token}`;
     return config;
   },
   error => {
@@ -22,8 +21,10 @@ axios.interceptors.response.use(
   }
 );
 
+// Función fetcher para obtener datos
 const fetcher = url => axios.get(url).then(res => res.data);
 
+// Obtener comentarios con paginación
 const GetComments = async (page = 1, limit = 3) => {
   try {
     const from = (page - 1) * limit;
@@ -35,6 +36,7 @@ const GetComments = async (page = 1, limit = 3) => {
   }
 };
 
+// Crear un nuevo comentario
 const CreateComment = async (data) => {
   try {
     const url = `${backend_url}/comment/create-new-comment`;
@@ -46,4 +48,38 @@ const CreateComment = async (data) => {
   }
 };
 
-export { GetComments, CreateComment };
+const ApproveComments = async (comment) => {
+  try {
+    const url = `${backend_url}/comment/autorize-comment/${comment}`;
+    return await axios.put(url);
+
+  } catch (error) {
+    console.error('Error al aprobar el comentario:', error);
+    throw error;
+  }
+}
+
+
+const GetCommentByID = async (id) => {
+  try {
+    const url = `${backend_url}/comment/get-comments-by-id/${id}`;
+    const response = await axios.get(url);
+
+    return response.data;
+  } catch (error) {
+    if (error.response) {
+      console.error(`Error en la respuesta del servidor: ${error.response.data}`);
+      return error.response.data; // Devuelve la respuesta del backend
+    } else if (error.request) {
+      console.error('Error en la solicitud:', error.request);
+    } else {
+      console.error('Error al configurar la solicitud:', error.message);
+    }
+    
+    return { error: 'Error desconocido al obtener comentarios' };
+  }
+};
+
+
+
+export { GetComments, CreateComment, ApproveComments, GetCommentByID };

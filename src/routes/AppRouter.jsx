@@ -4,6 +4,7 @@ import Projects from '../components/projects/AppGetProjects';
 import AppProfile from '../components/user/AppProfile';
 import AppContact from '../components/user/AppContact';
 import ProjectDetail from '../components/projects/GetProjectDetail'; // Asegúrate de importar el componente
+import ApproveCommentComponent from '../components/comments/AppAproveComments';
 
 const AppRouter = () => {
   return (
@@ -12,6 +13,7 @@ const AppRouter = () => {
       <Route path="/user/profile/get-escnil994-info" element={<AppProfile />} />
       <Route path="/user/profile/contact" element={<AppContact />} />
       <Route path="/projects/get-project/:id/:nameproject" element={<ProjectDetail />} />
+      <Route path="/comment/approve-comment/:id" element={ <ApproveCommentComponent/>} />
       <Route path="/" element={<Navigate to="/projects/get-all-projects" />} />
     </Routes>
   );
