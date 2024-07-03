@@ -647,10 +647,11 @@ aside .sp {
   padding-bottom: 20px;
   padding-top: 0px;
   text-align: center;
+  padding-top: 20px;
 }
 
 .project-item-especial img {
-  width: 15% !important;
+  width: 20% !important;
 }
 
 #social {
@@ -1633,4 +1634,10 @@ aside .sp {
   #logo {
     width: 165px;
 }
+}
+
+
+.contact-card input{
+
+  text-align:  left !important;
 }

@@ -70,7 +70,7 @@ const AppProfile = () => {
           <hr />
           <h4>Nilson Eduardo Escobar Vicente</h4>
           <p className="JetBrains">Computer System Engineering at University of El Salvador</p>
-          <code className="text-secondary JetBrains">2019 - present</code>
+          <code className="text-secondary JetBrains">2021 - present</code>
         </div>
         <div className={layout.info}>
           <h3 className="general-text">Resume</h3>
@@ -99,7 +99,7 @@ const AppProfile = () => {
         </ul>
         <hr />
         <div className="row bgcert mb-3 p-3 rounded">
-          <div className="col-6">
+          <div className="col-12 col-md-6">
             <h4 className="general-text">Courses</h4>
             <ul className="m-3 text-size JetBrains">
               {courses.split(";").map((course, index) => (
@@ -107,7 +107,7 @@ const AppProfile = () => {
               ))}
             </ul>
           </div>
-          <div className="col-6">
+          <div className="col-12 col-md-6">
             <h4 className="general-text">Certifications</h4>
             <ul className="m-3 text-size JetBrains">
               {certifications.split(";").map((certification, index) => (
@@ -118,14 +118,14 @@ const AppProfile = () => {
         </div>
         <div className="row bgskills mb-3 p-3 rounded">
           <h4 className="general-text">Skills</h4>
-          <div className="col-6">
+          <div className="col-12 col-md-6">
             <ul className="m-3 text-size JetBrains">
               {leftSkills.map((skill, index) => (
                 <li key={index} className="text-start text-size">{skill}</li>
               ))}
             </ul>
           </div>
-          <div className="col-6">
+          <div className="col-12 col-md-6">
             <ul className="m-3 text-size JetBrains">
               {rightSkills.map((skill, index) => (
                 <li key={index} className="text-start text-size">{skill}</li>
@@ -133,6 +133,7 @@ const AppProfile = () => {
             </ul>
           </div>
         </div>
+
       </div>
     </div>
   );

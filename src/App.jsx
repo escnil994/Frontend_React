@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router } from 'react-router-dom';
 import "./assets/css/styles.css";
+import "./assets/css/responsive.css";
 import AppGetComments from "./components/comments/AppGetComments";
 import AppBanner from "./components/shared/AppBanner";
 import AppFooter from "./components/shared/AppFooter";

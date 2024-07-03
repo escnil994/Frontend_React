@@ -146,7 +146,44 @@
   }
 }
 
+
+
+
 @media (max-width: 800px) {
+
+  #content {
+    width: 98%;
+  }
+
+  .body{
+    max-width: 90% !important;
+}
+  #sidebar {
+    width: 100% !important;
+  }
+  .sidebar-item{
+    width: 100%;
+  }
+
+  .img-thumbnail {
+    width: 50% !important;
+}
+  .project-item-especial {
+    
+    padding-top: 0px;
+}
+
+
+.contact-card{
+  width: 80%;
+}
+  #font-desc{
+    width: 90% !important;
+  }
+
+  .col-md-5{
+    width: 100% !important;
+  }
   #comments .comment-item #content-comment {
     margin-top: -17px;
     padding-left: 30px;
@@ -189,6 +226,10 @@
   #errr p {
     font-size: 11px;
   }
+
+  .contact-card{
+    width: 90% !important;
+  }
 }
 
 @media (max-width: 650px) {
@@ -198,7 +239,7 @@
 
   .sidebar-item {
     text-align: center !important;
-    width: 400%;
+    width: 100%;
   }
 
   #search {
@@ -224,6 +265,13 @@
 
   #errr h1 {
     font-size: 100px;
+  }
+
+  #font-desc{
+    width: 100% !important;
+  }
+  .contact-card{
+    width: 100% !important;
   }
 }
 
@@ -328,6 +376,21 @@
   #content .container ul .contact-p a {
     font-size: 13px;
   }
+
+  .contact-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .contact-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  .contact-text {
+    display: none;
+  }
 }
 
 
@@ -366,6 +429,9 @@
 
   #body {
     width: 95%;
+  }
+  .sendmsg{
+    width: 100% !important;
   }
 }
 

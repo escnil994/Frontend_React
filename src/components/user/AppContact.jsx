@@ -50,9 +50,9 @@ const AppContact = () => {
       try {
         const resp = await AppContactTo(contactForm);
         setResponseMessage(resp.msg);
-        setContactForm({ name: '', email: '', message: '' }); 
-        setShowErrors(false); 
-        
+        setContactForm({ name: '', email: '', message: '' });
+        setShowErrors(false);
+
         Swal.fire({
           position: 'center',
           icon: 'success',
@@ -74,50 +74,71 @@ const AppContact = () => {
 
   return (
     <div id="body" className="JetBrains" style={{ padding: '20px' }}>
-      <h3 className="general-text" style={{ fontSize: '40px', marginBottom: '20px' }}>How can you get in contact with me?</h3>
+      <h3 className="general-text" style={{ fontSize: '40px', marginBottom: '20px' }}>Reach Out to Me</h3>
+
+
 
       <div className="row justify-content-center">
-        <div className="col-6 bg-light text-left" id="font-desc" style={{ padding: '20px', borderRadius: '10px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
-          <p><FaEnvelope title="Email" aria-label="Email" /> <a target="_blank" href="mailto:escnil994@nilson-escobar.com" className="text-secondary">escnil994@nilson-escobar.com</a></p>
-          <p><FaPhone title="Phone" aria-label="Phone" /> <a target="_blank" href="tel:50375068027" className="text-secondary">+503 7506-8027</a></p>
-          <p><FaWhatsapp title="Whatsapp" aria-label="Whatsapp" /> <a target="_blank" href="https://wa.me/50375068027" className="text-secondary">Write a message</a></p>
-          <p><FaLinkedin title="LinkedIn" aria-label="LinkedIn" /> <a target="_blank" href="https://www.linkedin.com/in/escnil994/" className="text-secondary">See my profile on LinkedIn</a></p>
-          <p><FaGithub title="Github" aria-label="Github" /> <a target="_blank" href="https://github.com/escnil994" className="text-secondary">Check my projects on Github</a></p>
+      <div className="col-8 bg-light text-left" id="font-desc" style={{ padding: '20px', borderRadius: '10px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
+        <div className="contact-info">
+          <p className="d-flex align-items-center m-2 contact-item">
+            <FaEnvelope title="Email" aria-label="Email" />
+            <a target="_blank" rel="noopener noreferrer" href="mailto:escnil994@nilson-escobar.com" className="text-secondary ml-2 contact-text">escnil994@nilson-escobar.com</a>
+          </p>
+          <p className="d-flex align-items-center m-2 contact-item">
+            <FaPhone title="Phone" aria-label="Phone" />
+            <a target="_blank" rel="noopener noreferrer" href="tel:50375068027" className="text-secondary ml-2 contact-text">+503 7506-8027</a>
+          </p>
+          <p className="d-flex align-items-center m-2 contact-item">
+            <FaWhatsapp title="Whatsapp" aria-label="Whatsapp" />
+            <a target="_blank" rel="noopener noreferrer" href="https://wa.me/50375068027" className="text-secondary ml-2 contact-text">Write a message</a>
+          </p>
+          <p className="d-flex align-items-center m-2 contact-item">
+            <FaLinkedin title="LinkedIn" aria-label="LinkedIn" />
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/escnil994/" className="text-secondary ml-2 contact-text">See my profile on LinkedIn</a>
+          </p>
+          <p className="d-flex align-items-center m-2 contact-item">
+            <FaGithub title="Github" aria-label="Github" />
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/escnil994" className="text-secondary ml-2 contact-text">Check my projects on Github</a>
+          </p>
         </div>
       </div>
+    </div>
+
+
 
       <br />
       <div className="row justify-content-center">
-        <div className="card w-75 contact-card">
+        <div className="card w-75 contact-card p-4">
           <form className="row needs-validation justify-content-center" onSubmit={contactar}>
-            <h5 className="contact-form-title">Contact me through form</h5>
-            <div className="col-md-5 position-relative form-group">
-              <label className="form-label">*Your name</label>
-              <input type="text" className="form-control" name="name" value={contactForm.name} onChange={handleChange} />
-              <div className="error-message">
+            <h5 className="contact-form-title text-center mb-4">Contact Form</h5>
+            <div className="col-md-5 position-relative form-group mb-3">
+              <input type="text" className="form-control" name="name" placeholder="Name" value={contactForm.name} onChange={handleChange} />
+              <div className="error-message text-danger">
                 {validateFields('name')}
               </div>
             </div>
-            <div className="col-md-5 position-relative form-group">
-              <label className="form-label">*Email</label>
-              <input type="text" className="form-control" name="email" value={contactForm.email} onChange={handleChange} />
-              <div className="error-message">
+            <div className="col-md-5 position-relative form-group mb-3">
+              <input type="email" className="form-control" name="email" placeholder="Email" value={contactForm.email} onChange={handleChange} />
+              <div className="error-message text-danger">
                 {validateFields('email')}
               </div>
             </div>
 
-            <div className="col-md-10 position-relative form-group">
-              <label className="form-label">*Message</label>
-              <textarea type="text" className="form-control" name="message" value={contactForm.message} onChange={handleChange}></textarea>
-              <div className="error-message">
+            <div className="col-md-10 position-relative form-group mb-3">
+              <textarea className="form-control" name="message" rows="4" placeholder="" value={contactForm.message} onChange={handleChange}></textarea>
+              <div className="error-message text-danger">
                 {validateFields('message')}
               </div>
             </div>
-            <button className="btn btn-primary w-50 m-3" type="submit" disabled={habilitar}>
+            <button className="btn btn-primary w-50 mt-3 sendmsg" type="submit" disabled={habilitar}>
               Send Message
             </button>
           </form>
         </div>
+
+
+
       </div>
     </div>
   );
