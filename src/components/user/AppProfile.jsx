@@ -75,7 +75,7 @@ const AppProfile = () => {
         <div className={layout.info}>
           <h3 className="general-text">Resume</h3>
           <div className="about-text">
-            <p>🚀 With three years as a support analyst at Dollarcity, I've gained expertise in systems administration, software/hardware management, and network troubleshooting.</p>
+            <p>🚀 With over four years as a support analyst, I've got experience in systems administration, software/hardware management, and network troubleshooting.</p>
             <p>💡 As a programming enthusiast, I've learned programming languages, databases, and tools. This skill set has supported both development projects at Dollarcity and personal projects.</p>
             <p>☁️ My experience with cloud technology is improving, along with other tools.</p>
             <p>💻 I'm dedicated to continuous learning and expanding my technical knowledge.</p>
@@ -98,7 +98,7 @@ const AppProfile = () => {
           </div>
         </ul>
         <hr />
-        <div className="row bgcert mb-3 p-3 rounded">
+        <div className="row bgskills mb-3 p-3 rounded">
           <div className="col-12 col-md-6">
             <h4 className="general-text">Courses</h4>
             <ul className="m-3 text-size JetBrains">
