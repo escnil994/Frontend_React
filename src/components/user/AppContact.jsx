@@ -82,24 +82,24 @@ const AppContact = () => {
       <div className="col-8 bg-light text-left" id="font-desc" style={{ padding: '20px', borderRadius: '10px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
         <div className="contact-info">
           <p className="d-flex align-items-center m-2 contact-item">
-            <FaEnvelope title="Email" aria-label="Email" />
+            <a className='text-secondary' target="_blank" rel="noopener noreferrer" href="mailto:escnil994@nilson-escobar.com" ><FaEnvelope title="Email" aria-label="Email" /></a>
             <a target="_blank" rel="noopener noreferrer" href="mailto:escnil994@nilson-escobar.com" className="text-secondary ml-2 contact-text">escnil994@nilson-escobar.com</a>
           </p>
           <p className="d-flex align-items-center m-2 contact-item">
-            <FaPhone title="Phone" aria-label="Phone" />
-            <a target="_blank" rel="noopener noreferrer" href="tel:50375068027" className="text-secondary ml-2 contact-text">+503 7506-8027</a>
+            <a className='text-secondary' target="_blank" rel="noopener noreferrer" href="tel:50375068027"><FaPhone title="Phone" aria-label="Phone" /></a>
+            <a className="text-secondary ml-2 contact-text"> +503 7506-8027</a>
           </p>
           <p className="d-flex align-items-center m-2 contact-item">
-            <FaWhatsapp title="Whatsapp" aria-label="Whatsapp" />
-            <a target="_blank" rel="noopener noreferrer" href="https://wa.me/50375068027" className="text-secondary ml-2 contact-text">Write a message</a>
+            <a className='text-secondary' target="_blank" rel="noopener noreferrer" href="https://wa.me/50375068027" ><FaWhatsapp title="Whatsapp" aria-label="Whatsapp"  /></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://wa.me/50375068027" className="text-secondary ml-2 contact-text"> Write a message</a>
           </p>
           <p className="d-flex align-items-center m-2 contact-item">
-            <FaLinkedin title="LinkedIn" aria-label="LinkedIn" />
-            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/escnil994/" className="text-secondary ml-2 contact-text">See my profile on LinkedIn</a>
+            <a className='text-secondary' target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/escnil994/" ><FaLinkedin title="LinkedIn" aria-label="LinkedIn" /></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/escnil994/" className="text-secondary ml-2 contact-text"> See my profile on LinkedIn</a>
           </p>
           <p className="d-flex align-items-center m-2 contact-item">
-            <FaGithub title="Github" aria-label="Github" />
-            <a target="_blank" rel="noopener noreferrer" href="https://github.com/escnil994" className="text-secondary ml-2 contact-text">Check my projects on Github</a>
+            <a className='text-secondary' target="_blank" rel="noopener noreferrer" href="https://github.com/escnil994"  ><FaGithub title="Github" aria-label="Github" /></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/escnil994" className="text-secondary ml-2 contact-text"> Check my projects on Github</a>
           </p>
         </div>
       </div>
