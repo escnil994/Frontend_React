@@ -1,15 +1,12 @@
 .bgcert {
     background-color: #f5fdff !important;
+
 }
 
 .bgskills {
     background-color: #ffffff !important;
 }
 
-@font-face {
-    font-family: "JetBrains";
-    src: url("fonts/JetBrainsMono-Bold.ttf");
-  }
 
 
   
@@ -29,6 +26,6 @@
 
 
 .about-text{
-    font-family: JetBrains;
-    font-size: 0.85rem;
+    font-family: "Helvetica", Arial, sans-serif !important;;
+    font-size: 1rem;
 }

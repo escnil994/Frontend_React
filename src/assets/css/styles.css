@@ -27,10 +27,7 @@
   src: url("fonts/lobster.ttf");
 }
 
-@font-face {
-  font-family: "JetBrains";
-  src: url("fonts/JetBrainsMono-Bold.ttf");
-}
+
 
 /*Estilos Generales*/
 
@@ -85,8 +82,8 @@ body {
 .icon {
   font-family: "WebSymbolsRegular";
 }
-.JetBrains{
-  font-family: "JetBrains" !important;
+.JetBrains {
+  font-family: "Helvetica", Arial, sans-serif !important;
 }
 
 .icon-look {
