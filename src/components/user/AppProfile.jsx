@@ -84,19 +84,7 @@ const AppProfile = () => {
           </div>
           <hr />
         </div>
-        <h3 className="general-text">Experience:</h3>
-        <ul className="text-size">
-          <h4 className="general-text">Technical Support Agent</h4>
-          <div className="about-text">
-            <li className="list-group-item text-start text-size">Providing support to residential customers with services like TV, Internet, and phone lines</li>
-          </div>
-          <h4 className="general-text">Support Center Specialist</h4>
-          <div className="about-text">
-            {experienceDoll && typeof experienceDoll === 'string' && experienceDoll.split(";;").map((experience, index) => (
-              <li key={index} className="list-group-item text-start text-size">- {experience}.</li>
-            ))}
-          </div>
-        </ul>
+     
         <hr />
         <div className="row bgskills mb-3 p-3 rounded">
           <div className="col-12 col-md-6">
